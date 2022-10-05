@@ -11,11 +11,6 @@ https://user-images.githubusercontent.com/77754538/194108726-112bab3b-30c4-443d-
 
 
 
-gif:
-
-
-![helmholtz copy](https://user-images.githubusercontent.com/77754538/194107901-dbcb7a8c-e48b-4e10-b587-d7b045d80be8.gif)
-
 
 
 
