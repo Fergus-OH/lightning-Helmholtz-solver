@@ -21,7 +21,7 @@ Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, 
 #### Required positional arguments
 
 
-- `wavenum`
+1. `wavenum`
 
     (integer) The attributes that every function declared with this
     keyword should have (in the form of source code, with a leading `:`).
@@ -29,7 +29,7 @@ Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, 
     Negative integers are used to indicate plane wave propogation or point source radiation problem.
     The wavenumber for the problem is taken to be the absolute value of `wavnum`, a minus sign can meerly be used as a flag.
     
-- `P`
+2. `P`
     (integer, vector, or string) 
     vector of corners as complex numbers $z = x+iy$ in counterclockwise order to specify a polygon or cell array of corners `v` and pairs `[v r]` to specify a circular polygon: $r =$ radius of curvature of arc from this v to the next or one of the following specified strings `'sqr'`[square], `'rec'`[tangle], `'snow'`[flake], `'pent'`[agaon], `'hex'`[agon], `'L'`, `'circleL'`, or `'C'` or integer $\ge 3$, the number of corners of a random polygon or integer $\le -3, -1$ $\times$ no. of corners of a random circular polygon.
     
