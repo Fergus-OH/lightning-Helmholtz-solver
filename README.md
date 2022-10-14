@@ -14,10 +14,6 @@ Dirichlet boundary data on the simply-connected region Omega bounded by P, which
 
 ### Required
 
-| Parameter | Type | Default | Description |
-| :-------- | :--: | :------:| :-----------|
-| `g` | function | xx | desctiption |
-| `tol` | float | 1e-6 | tolerance |
 
 - `wavenum`
 
@@ -28,7 +24,37 @@ Dirichlet boundary data on the simply-connected region Omega bounded by P, which
 or integer ≥ 3, the number of corners of a random polygon
 or integer ≤ -3, -1 x no. of corners of a random ... circular polygon].
 
-### Optional
+
+
+
+### Optional inputs
+
+| Parameter   | Type | Default | Description |
+| :---------- | :--: | :------:| :-----------|
+| `g`         | function | xx | desctiption |
+| `tol`       | float | 1e-6 | tolerance |
+| `z0`        | complex number |
+| `noplots`   | flag |
+| `noplots3d` | flag |
+| `steps`     | flag |
+| `scat`      | flag |
+| `slow`      | flag |
+| `fs`        | flag |
+
+
+
+### flags
+
+the following flag parameters can be specified
+
+| Flag   | Type | Default | Description |
+| :---------- | :--: | :------:| :-----------|
+| `noplots`   | flag |
+| `noplots3d` | flag |
+| `steps`     | flag |
+| `scat`      | flag |
+| `slow`      | flag |
+| `fs`        | flag |
 
 If you don't specify a particular option, its default value is used. The
 available configuration options are:
@@ -59,13 +85,13 @@ available configuration options are:
 
 Examples:
 
-- helmholtz(50,'sqr');                              % plane with square
-- helmholtz(-50,'sqr');                             % point with square
-- helmholtz(-20,'pent','tol',1e-10);                % pentagon
-- helmholtz(-20,'circleL','z0',2+3i);               % circular L-shape
-- helmholtz(20,'bullet','z0',1);                    % bullet
-- helmholtz(-30,'snow','steps')                     % snowflake
-- helmholtz(50,[1/2*exp(2i*pi*([1:3])/3)],'z0',1i)  % triangle
+`helmholtz(50,'sqr');`                              % plane with square
+`helmholtz(-50,'sqr');`                             % point with square
+`helmholtz(-20,'pent','tol',1e-10);`                % pentagon
+`helmholtz(-20,'circleL','z0',2+3i);`               % circular L-shape
+`helmholtz(20,'bullet','z0',1);`                    % bullet
+`helmholtz(-30,'snow','steps')`                     % snowflake
+`helmholtz(50,[1/2*exp(2i*pi*([1:3])/3)],'z0',1i)`  % triangle
 
 % two point sources:
 ```matlab
