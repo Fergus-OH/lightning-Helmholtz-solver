@@ -29,8 +29,8 @@ Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, 
     (integer, vector, or string) 
     vector of corners as complex numbers $z = x+iy$ in counterclockwise order to specify a polygon or cell array of corners `v` and pairs `[v r]` to specify a circular polygon: $r =$ radius of curvature of arc from this v to the next or one of the following specified strings `'sqr'`[square], `'rec'`[tangle], `'snow'`[flake], `'pent'`[agaon], `'hex'`[agon], `'L'`, `'circleL'`, or `'C'` or integer $\ge 3$, the number of corners of a random polygon or integer $\le -3, -1$ $\times$ no. of corners of a random circular polygon.
     
-    | :--------- | :---------: |
     | String     | Description |
+    | :--------- | :---------: |
     | `'sqr'`    | square      |
     | `'rec'`    |[tangle]     |
     | `'snow'`   | [flake]     |
