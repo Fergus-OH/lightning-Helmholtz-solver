@@ -27,6 +27,7 @@ Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, 
     keyword should have (in the form of source code, with a leading `:`).
     The sign of `wavnum` is used as an indicator to determine the default value for `g`.
     Negative integers are used to indicate plane wave propogation or point source radiation problem.
+    The wavenumber for the problem is taken to be the absolute value of `wavnum`, a minus sign can meerly be used as a flag.
     
 - `P`
     (integer, vector, or string) 
