@@ -32,9 +32,9 @@ Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, 
     | String     | Description |
     | :--------- | :---------: |
     | `'sqr'`    | square      |
-    | `'rec'`    |[tangle]     |
-    | `'snow'`   | [flake]     |
-    | `'pent'`   | [agaon]     |
+    | `'rec'`    | rectangle   |
+    | `'snow'`   | snowflake   |
+    | `'pent'`   | pentagaon   |
     | `'hex'`    | hexagon     |
     | `'L'`      | L-shape     |
     | `'circleL'`| circle L shape |
