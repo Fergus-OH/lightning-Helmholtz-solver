@@ -6,6 +6,14 @@
 <!-- [https://user-images.githubusercontent.com/77754538/194108726-112bab3b-30c4-443d-9f5c-154a378ba39d.mp4]:: -->
 
 
+The Helmholtz equation is an elliptic partial differential equation (PDE) that has many applications to physics including accoustics and is named after German physicist Hermann von Helmholtz 1821-1894.
+The lightning method for solving partial differential equations with exceptional speed and accuracy has shown to be greatly successful since it’s introduction.
+Plenty of fruitful work has been completed on the lightning method for the Laplace equation and a state-of-the-art implementation has been developed named laplace.m, which solves typical problems in less than 1 second on a desktop to 8-digit accuracy.
+There are many existing methods for numerically solving the Helmholtz equation numerically.
+The standard two are finite element method and boundary integral equations.
+This thesis explores our work to develop helmholtz.m, an analogous version of laplace.m for solving the Helmholtz equation using the lightning method.
+This is a much harder problem than that for Laplace and not much work has been done in this regard so far. Our implementation are in Matlab and experiments were performed in 16-digit floating-point arithmetic.
+
 ## Usage
 
 `U = helmholtz(wavenum, P, g)` solves the Helmholtz equation with
