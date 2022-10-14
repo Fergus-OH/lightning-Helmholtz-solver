@@ -62,7 +62,7 @@ Examples:
 - helmholtz(50,[1/2*exp(2i*pi*([1:3])/3)],'z0',1i)  % triangle
 
 % two point sources:
-```
+```matlab
 wavenum = -30; z0_pt = .5+1i;
 g = @(z) besselh(0,-wavenum*abs(z-(z0_pt))) + besselh(0,-wavenum*abs(z-(-z0_pt')));
 helmholtz(wavenum,'sqr',g,'noplot3d');
