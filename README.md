@@ -8,6 +8,13 @@
 
 ## Usage
 
+### Required
+- `attributes`
+
+    (string) The attributes that every function declared with this
+    keyword should have (in the form of source code, with a leading `:`).
+
+### Optional
 
 If you don't specify a particular option, its default value is used. The
 available configuration options are:
