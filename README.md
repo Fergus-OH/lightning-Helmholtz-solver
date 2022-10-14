@@ -106,8 +106,18 @@ available configuration options are:
 - `fs` -->
 
 
+### Output arguments
 
+[u, maxerr, tsolve, nkv, Z, Zplot, pol, A]
 
+- `u`
+- `maxerr`
+- `tsolve`
+- `nkv`
+- `Z`
+- `Zplot`
+- `pol`
+- `A`
 
     
 ### Examples
