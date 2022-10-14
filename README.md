@@ -14,8 +14,6 @@ Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, 
 
 
 
-Repeating positional arguments
-
 
       
 ### Input arguments
@@ -59,7 +57,7 @@ Optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the 
 
 
 
-#### flags
+
 
 the following flag parameters can be specified
 
@@ -120,7 +118,7 @@ available configuration options are:
 - `A`
 
     
-### Examples
+## Examples
 
 Examples:
 
