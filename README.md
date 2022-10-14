@@ -29,7 +29,7 @@ Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, 
     The wavenumber for the problem is taken to be the absolute value of `wavnum`, a minus sign can meerly be used as a flag.
     
 2. `P`  
-   (integer, vector, or string)
+   (integer, vector, or string)  
    One of the following:
     - Vector of corners as complex numbers $z = x+iy$ in counterclockwise order to specify a polygon or cell array of corners `v` and pairs `[v r]` to specify a circular polygon: $r =$ radius of curvature of arc from this `v` to the next
     - One of the specified strings from the table below.
