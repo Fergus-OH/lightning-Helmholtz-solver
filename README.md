@@ -15,7 +15,7 @@
     keyword should have (in the form of source code, with a leading `:`).
 - `P`
     (integer, vector, or string) vector of corners as complex numbers z = x+iy.
-     h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x
+     $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 
 ### Optional
 
