@@ -14,8 +14,7 @@
     (integer) The attributes that every function declared with this
     keyword should have (in the form of source code, with a leading `:`).
 - `P`
-    (integer, vector, or string) vector of corners as complex numbers z = x+iy.
-     $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+    (integer, vector, or string) vector of corners as complex numbers $z = x+iy$.
      
      $\sqrt{3x-1}+(1+x)^2$
 
