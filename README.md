@@ -86,11 +86,17 @@ available configuration options are:
 Examples:
 
 `helmholtz(50,'sqr');`                              % plane with square
+
 `helmholtz(-50,'sqr');`                             % point with square
+
 `helmholtz(-20,'pent','tol',1e-10);`                % pentagon
+
 `helmholtz(-20,'circleL','z0',2+3i);`               % circular L-shape
+
 `helmholtz(20,'bullet','z0',1);`                    % bullet
+
 `helmholtz(-30,'snow','steps')`                     % snowflake
+
 `helmholtz(50,[1/2*exp(2i*pi*([1:3])/3)],'z0',1i)`  % triangle
 
 % two point sources:
