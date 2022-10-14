@@ -4,3 +4,24 @@
 
 
 [https://user-images.githubusercontent.com/77754538/194108726-112bab3b-30c4-443d-9f5c-154a378ba39d.mp4]::
+
+
+## Usage
+
+
+If you don't specify a particular option, its default value is used. The
+available configuration options are:
+
+- `attributes`
+
+    (string) The attributes that every function declared with this
+    keyword should have (in the form of source code, with a leading `:`).
+
+    Default: nothing
+
+- `attributes`
+
+    (string) The attributes that every function declared with this
+    keyword should have (in the form of source code, with a leading `:`).
+
+    Default: nothing
