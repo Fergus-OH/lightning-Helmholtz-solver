@@ -8,12 +8,18 @@
 
 ## Usage
 
-U = HELMHOLTZ(wavenum,P,G) solves the Helmholtz equation with
+`U = helmholtz(wavenum, P, g)` solves the Helmholtz equation with
 Dirichlet boundary data on the simply-connected region Omega bounded by P, which may be a polygon or circular polygon.
       
 
 ### Required
-- `wavenum`matlab
+
+| Parameter | Type | Default | Description |
+| :-------- | :--: | :------:| :-----------|
+| `g` | function | xx | desctiption |
+| `tol` | float | 1e-6 | tolerance |
+
+- `wavenum`
 
     (integer) The attributes that every function declared with this
     keyword should have (in the form of source code, with a leading `:`).
