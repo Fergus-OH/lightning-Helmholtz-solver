@@ -9,7 +9,7 @@
 ## Usage
 
 `U = helmholtz(wavenum, P, g)` solves the Helmholtz equation with
-Dirichlet boundary data on the simply-connected region Omega bounded by `P`, which may be a polygon or circular polygon.
+Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, which may be a polygon or circular polygon.
       
 
 ### Required
