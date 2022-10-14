@@ -54,8 +54,8 @@ Default `@(z) exp(-1i*real(wavenum*exp(-1i*z0ang)*z)))` for `wavenumber`$>0$ `@(
 
 #### Optional name-value arguments
 
-Name-value arguments
-Optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the argument name and Value is the corresponding value. Name-value arguments must appear after other arguments, but the order of the pairs does not matter.
+Optional pairs of arguments as `Name1, Value1, ..., NameN, ValueN`, where Name is the argument name and Value is the corresponding value.
+Name-value arguments must appear after other arguments, but the order of the pairs does not matter.
 
 
 - `tol`       float - 1e-6 - tolerance etc
