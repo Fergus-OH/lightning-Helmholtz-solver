@@ -38,7 +38,7 @@ Dirichlet boundary data on the simply-connected region Omega bounded by `P`, whi
 | `steps`     | flag |
 | `scat`      | flag |
 | `slow`      | flag |
-| `fs`        | flag |
+| `fs`        | float+ | 12? | set font size for plots |
 
 
 
@@ -46,14 +46,13 @@ Dirichlet boundary data on the simply-connected region Omega bounded by `P`, whi
 
 the following flag parameters can be specified
 
-| Flag   | Type | Default | Description |
-| :---------- | :--: | :------:| :-----------|
-| `noplots`   | flag |
-| `noplots3d` | flag |
-| `steps`     | flag |
-| `scat`      | flag |
-| `slow`      | flag |
-| `fs`        | flag |
+| Flag        | Type | Description |
+| :---------- | :--: | :-----------|
+| `noplots`   | flag | surpresses plotting |
+| `noplots3d` | flag | surpresses 3D surface plotting |
+| `steps`     | flag | for step-by-step plots of errors on boundary and poles |
+| `scat`      | flag | to plot only the scattered field |
+| `slow`      | flag | to turn off adaptive mode for cleaner root-exponential convergence curves |
 
 If you don't specify a particular option, its default value is used. The
 available configuration options are:
