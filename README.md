@@ -7,6 +7,8 @@
 
 
 The Helmholtz equation is an elliptic partial differential equation (PDE) that has many applications to physics including accoustics and is named after German physicist Hermann von Helmholtz 1821-1894.
+This repository contains the implementation carried out during my thesis entitled *Ligntning Helmholtz solver*.
+This was completed under the supervision of Nick Trefethen as part of an MSc in Mathematical Sciences at the University of Oxford.
 The lightning method for solving partial differential equations with exceptional speed and accuracy has shown to be greatly successful since it’s introduction.
 Plenty of fruitful work has been completed on the lightning method for the Laplace equation and a state-of-the-art implementation has been developed named laplace.m, which solves typical problems in less than 1 second on a desktop to 8-digit accuracy.
 There are many existing methods for numerically solving the Helmholtz equation numerically.
