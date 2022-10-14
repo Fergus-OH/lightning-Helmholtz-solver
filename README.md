@@ -48,9 +48,9 @@ Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, 
 <!-- One of the predefined polygons of specified strings from the table below. -->
 
 #### Optional positional arguments
-3. `g`  
-      function handle for Dirichlet boundary data that satisfies helm(g) or cell array of function handles for sides `P1`-`P2`, `P2`-`P3`.
-      Default `@(z) exp(-1i*real(wavenum*exp(-1i*z0ang)*z)))` for `wavenumber`$>0$ `@(z) @(z) besselh(0,-wavenum*abs(z-(z0_pt)))` for `wavenumber`$<0$.
+3. `g` (function handle)  
+     function handle for Dirichlet boundary data that satisfies the Helmholtz equation or cell array of function handles for sides `P1`-`P2`, `P2`-`P3`.
+      Default `@(z) exp(-1i*real(wavenum*exp(-1i*z0ang)*z)))` for `wavenum`$>0$ `@(z) @(z) besselh(0,-wavenum*abs(z-(z0_pt)))` for `wavenum`$<0$.
 
 
 
@@ -60,9 +60,15 @@ Optional pairs of arguments as `Name1, Value1, ..., NameN, ValueN`, where Name i
 Name-value arguments must appear after other arguments, but the order of the pairs does not matter.
 
 
-- `tol`       float - 1e-6 - tolerance etc
-- `z0`        complex number
-- `fs`        float+ -  12? - set font size for plots
+- `tol` (float)  
+      Default 1e-6. Tolerance etc
+- `z0`  
+      (complex number)
+- `fs` (float+)  
+      Default 12?. set font size for plots
+
+
+
 
 <!-- | Parameter   | Type | Default | Description |
 | :---------- | :--: | :------:| :-----------|
@@ -79,7 +85,7 @@ Name-value arguments must appear after other arguments, but the order of the pai
 
 
 
-the following flag parameters can be specified
+The following flag parameters can be specified:
 
 
 
