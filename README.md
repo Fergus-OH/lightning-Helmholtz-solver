@@ -13,7 +13,7 @@ Dirichlet boundary data on the simply-connected region Omega bounded by P, which
       
 
 ### Required
-- `wavenum`
+- `wavenum`matlab
 
     (integer) The attributes that every function declared with this
     keyword should have (in the form of source code, with a leading `:`).
