@@ -80,7 +80,7 @@ the following flag parameters can be specified
 
 
 
-If you don't specify a particular option, its default value is used. The
+<!-- If you don't specify a particular option, its default value is used. The
 available configuration options are:
 
 - `g`
@@ -103,7 +103,7 @@ available configuration options are:
 - `steps`
 - `scat`
 - `slow`
-- `fs`
+- `fs` -->
 
 
 
