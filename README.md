@@ -65,13 +65,13 @@ the following flag parameters can be specified
 
 
 
-| Flag        | Type | Description |
-| :---------- | :--: | :-----------|
-| `noplots`   | flag | surpresses plotting |
-| `noplots3d` | flag | surpresses 3D surface plotting |
-| `steps`     | flag | for step-by-step plots of errors on boundary and poles |
-| `scat`      | flag | to plot only the scattered field |
-| `slow`      | flag | to turn off adaptive mode for cleaner root-exponential convergence curves |
+| Flag        | Description |
+| :---------- | :-----------|
+| `noplots`   | surpresses plotting |
+| `noplots3d` | surpresses 3D surface plotting |
+| `steps`     | for step-by-step plots of errors on boundary and poles |
+| `scat`      | to plot only the scattered field |
+| `slow`      | to turn off adaptive mode for cleaner root-exponential convergence curves |
 
 
 
