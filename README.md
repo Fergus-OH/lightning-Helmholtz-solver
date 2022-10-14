@@ -41,7 +41,12 @@ Repeating positional arguments
 Name-value arguments
 Optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the argument name and Value is the corresponding value. Name-value arguments must appear after other arguments, but the order of the pairs does not matter.
 
-| Parameter   | Type | Default | Description |
+
+- `tol`       float - 1e-6 - tolerance etc
+- `z0`        complex number
+- `fs`        float+ -  12? - set font size for plots
+
+<!-- | Parameter   | Type | Default | Description |
 | :---------- | :--: | :------:| :-----------|
 | `tol`       | float | 1e-6 | tolerance |
 | `z0`        | complex number |
@@ -50,7 +55,7 @@ Optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the 
 | `steps`     | flag |
 | `scat`      | flag |
 | `slow`      | flag |
-| `fs`        | float+ | 12? | set font size for plots |
+| `fs`        | float+ | 12? | set font size for plots | -->
 
 
 
