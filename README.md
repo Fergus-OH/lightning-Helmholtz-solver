@@ -45,6 +45,8 @@ Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, 
 #### Optional positional arguments
 - `g` function handle for Dirichlet boundary data that satisfies helm(g) or cell array of function handles for sides P1-P2, P2-P3, (default `@(z) exp(-1i*real(wavenum*exp(-1i*z0ang)*z)))` for `wavenumber`$>0$ `@(z) @(z) besselh(0,-wavenum*abs(z-(z0_pt)))` for `wavenumber`$<0$)
 
+$\exp{2}$
+
 #### Optional name-value arguments
 
 Name-value arguments
