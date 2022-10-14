@@ -30,7 +30,7 @@ Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, 
 
 | Parameter   | Type | Default | Description |
 | :---------- | :--: | :------:| :-----------|
-| `g`         | function | xx | vector of corners as complex numbers $z = x+iy$ in counterclockwise order to specify a polygon or cell array of corners v and pairs $[v r]$ to specify a circular polygon: r = radius of curvature of arc from this v to the next or one of the following specified strings 'sqr'[square], 'rec'[tangle], 'snow'[flake], pent[agaon], 'hex'[agon], 'L', 'circleL', or 'C' or integer >= 3, the number of corners of a random polygon or integer <= -3, -1 x no. of corners of a random circular polygon] |
+| `g`         | function | xx | function handle for Dirichlet boundary data that satisfies helm(g) or cell array of function handles for sides P1-P2, P2-P3, (default `@(z) exp(-1i*real(wavenum*exp(-1i*z0ang)*z)))` for `wavenumber`$>0$ `@(z) @(z) besselh(0,-wavenum*abs(z-(z0_pt)))` for `wavenumber`$<0$) |
 | `tol`       | float | 1e-6 | tolerance |
 | `z0`        | complex number |
 | `noplots`   | flag |
