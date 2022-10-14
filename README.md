@@ -9,10 +9,12 @@
 ## Usage
 
 ### Required
-- `attributes`
+- `wavenum`
 
-    (string) The attributes that every function declared with this
+    (integer) The attributes that every function declared with this
     keyword should have (in the form of source code, with a leading `:`).
+- `P`
+    (integer, vector, or string) vector of corners as complex numbers z = x+iy.
 
 ### Optional
 
@@ -32,3 +34,5 @@ available configuration options are:
     keyword should have (in the form of source code, with a leading `:`).
 
     Default: nothing
+    
+### Examples
