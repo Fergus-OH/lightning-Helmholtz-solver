@@ -8,15 +8,21 @@
 
 ## Usage
 
+U = HELMHOLTZ(wavenum,P,G) solves the Helmholtz equation with
+Dirichlet boundary data on the simply-connected region Omega bounded by P, which may be a polygon or circular polygon.
+      
+
 ### Required
 - `wavenum`
 
     (integer) The attributes that every function declared with this
     keyword should have (in the form of source code, with a leading `:`).
 - `P`
-    (integer, vector, or string) vector of corners as complex numbers $z = x+iy$.
-     
-     $\sqrt{3x-1}+(1+x)^2$
+    (integer, vector, or string) vector of corners as complex numbers $z = x+iy$ in counterclockwise order to specify a polygon or cell array of corner $v$ and pairs $[v r]$ to specify a circular polgon: $r = $ radius of curvature of arc from this $v$ to the next or one of the following specifird strings 'sqr'[square], 'rec'[tangle], 'snow'[flake], ...
+pent[agaon],
+            'hex'[agon], 'L', 'circleL', or 'C'
+or integer ≥ 3, the number of corners of a random polygon
+or integer ≤ -3, -1 x no. of corners of a random ... circular polygon].
 
 ### Optional
 
