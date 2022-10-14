@@ -10,9 +10,17 @@
 
 `U = helmholtz(wavenum, P, g)` solves the Helmholtz equation with
 Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, which may be a polygon or circular polygon.
-      
 
-### Required
+
+
+
+Repeating positional arguments
+
+
+      
+### Input arguments
+
+#### Required positional arguments
 
 
 - `wavenum`
@@ -25,12 +33,16 @@ Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, 
 
 
 
+#### Optional positional arguments
+- `g` function handle for Dirichlet boundary data that satisfies helm(g) or cell array of function handles for sides P1-P2, P2-P3, (default `@(z) exp(-1i*real(wavenum*exp(-1i*z0ang)*z)))` for `wavenumber`$>0$ `@(z) @(z) besselh(0,-wavenum*abs(z-(z0_pt)))` for `wavenumber`$<0$)
 
-### Optional inputs
+#### Optional name-value arguments
+
+Name-value arguments
+Optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the argument name and Value is the corresponding value. Name-value arguments must appear after other arguments, but the order of the pairs does not matter.
 
 | Parameter   | Type | Default | Description |
 | :---------- | :--: | :------:| :-----------|
-| `g`         | function | xx | function handle for Dirichlet boundary data that satisfies helm(g) or cell array of function handles for sides P1-P2, P2-P3, (default `@(z) exp(-1i*real(wavenum*exp(-1i*z0ang)*z)))` for `wavenumber`$>0$ `@(z) @(z) besselh(0,-wavenum*abs(z-(z0_pt)))` for `wavenumber`$<0$) |
 | `tol`       | float | 1e-6 | tolerance |
 | `z0`        | complex number |
 | `noplots`   | flag |
@@ -42,9 +54,11 @@ Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, 
 
 
 
-### flags
+#### flags
 
 the following flag parameters can be specified
+
+
 
 | Flag        | Type | Description |
 | :---------- | :--: | :-----------|
@@ -53,6 +67,13 @@ the following flag parameters can be specified
 | `steps`     | flag | for step-by-step plots of errors on boundary and poles |
 | `scat`      | flag | to plot only the scattered field |
 | `slow`      | flag | to turn off adaptive mode for cleaner root-exponential convergence curves |
+
+
+
+
+
+
+
 
 If you don't specify a particular option, its default value is used. The
 available configuration options are:
@@ -78,6 +99,11 @@ available configuration options are:
 - `scat`
 - `slow`
 - `fs`
+
+
+
+
+
     
 ### Examples
 
