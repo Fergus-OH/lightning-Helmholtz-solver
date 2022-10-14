@@ -27,18 +27,42 @@ or integer ≤ -3, -1 x no. of corners of a random ... circular polygon].
 If you don't specify a particular option, its default value is used. The
 available configuration options are:
 
-- `attributes`
+- `g`
 
     (string) The attributes that every function declared with this
     keyword should have (in the form of source code, with a leading `:`).
 
     Default: nothing
 
-- `attributes`
+- `tol`
 
     (string) The attributes that every function declared with this
     keyword should have (in the form of source code, with a leading `:`).
 
     Default: nothing
+- `tol`
+- `z0`
+- `noplots`
+- `noplots3d`
+- `steps`
+- `scat`
+- `slow`
+- `fs`
     
 ### Examples
+
+Examples:
+
+helmholtz(50,'sqr');                              % plane with square
+helmholtz(-50,'sqr');                             % point with square
+helmholtz(-20,'pent','tol',1e-10);                % pentagon
+helmholtz(-20,'circleL','z0',2+3i);               % circular L-shape
+helmholtz(20,'bullet','z0',1);                    % bullet
+helmholtz(-30,'snow','steps')                     % snowflake
+elmholtz(50,[1/2*exp(2i*pi*([1:3])/3)],'z0',1i)  % triangle
+
+% two point sources:
+wavenum = -30; z0_pt = .5+1i;
+g = @(z) besselh(0,-wavenum*abs(z-(z0_pt))) + besselh(0,-wavenum*abs(z-(-z0_pt')));
+helmholtz(wavenum,'sqr',g,'noplot3d');
+
