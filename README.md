@@ -40,6 +40,7 @@ common incident fields that are inbuilt to the solver are the following
 propogating plane wave from an angle $\theta$
 
 $$g_\theta(z) = -\exp{(-i\Real [kze^{-i\theta}])} \quad \theta \in [0, 2\pi]$$
+where $\theta$ is the incident angle of propogation.
 
 point source radiating from a point $z_\*$
 
