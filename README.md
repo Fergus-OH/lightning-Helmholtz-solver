@@ -38,14 +38,12 @@ $$f(z) = 0, \quad z \in P$$
 common incident fields that are inbuilt to the solver are the following
 
 propogating plane wave from an angle $\theta$
-
 $$g_\theta(z) = -\exp{(-i\text{Re} [kze^{-i\theta}])} \quad \theta \in [0, 2\pi]$$
 where $\theta$ is the incident angle of propogation.
 
 point source radiating from a point $z_\*$
-
 $$g_{z_\*}(z) = -H_0^{(1)}(k \lvert z - z_{\*} \rvert) \quad z_{\*} \in \Omega$$
-
+where $z_\*$ is the location of the point source.
 
 ## Usage
 
