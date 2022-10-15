@@ -20,7 +20,7 @@ However,
 
 ![scatter](scatter/combined_merge_markup.png)
 
-
+$$\Delta u(z) + k^2u(z) = 0, \: z \in \Omega$$
 
 
 ## Usage
