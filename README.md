@@ -8,18 +8,13 @@
 
 The Helmholtz equation is an elliptic partial differential equation (PDE) and represents a time-independent form of the wave equation.
 It is named after German physicist Hermann von Helmholtz (1821-1894) and has many applications in physics, including seismology, acoustics, and electromagnetic radiation.
-The lightning method for solving PDEs with exceptional speed and accuracy has shown remarkable success with its original introduction for solving the Laplace equation, which has a state-of-the-art implementation that solves typical problems in less than 1 second on a desktop to 8-digit accuracy.
+The lightning method for solving PDEs with exceptional speed and accuracy has shown remarkable success with its original introduction for solving the Laplace equation, which has a state-of-the-art implementation that solves typical problems in less than 1 second on a desktop to 8-digit accuracy [[1]](#1).
 This repository contains helmholtz.m, an implementation of the lightning method for solving the Helmholtz equation, carried out during my thesis entitled *Lightning Helmholtz solver*.
 I completed this under the supervision of Professor Nick Trefethen as part of the MSc in Mathematical Sciences at the University of Oxford.
 
 
-"...the **go to** statement should be abolished..." [[1]](#1).
 
-## References
-<a id="1">[1]</a> 
-Dijkstra, E. W. (1968). 
-Go to statement considered harmful. 
-Communications of the ACM, 11(3), 147-148.
+
 
 
 ## Usage
@@ -184,3 +179,23 @@ wavenum = -30; z0_pt = .5+1i;
 g = @(z) besselh(0,-wavenum*abs(z-(z0_pt))) + besselh(0,-wavenum*abs(z-(-z0_pt')));
 helmholtz(wavenum,'sqr',g,'noplot3d');
 ```
+
+
+
+
+
+
+
+## References
+<a id="1">[1]</a> 
+Abinand Gopal and Lloyd N. Trefethen. New laplace and helmholtz solvers. Proceedings of the National Academy of Sciences of the United States of America, 116:10223 – 10225, 2019.
+<!-- 
+Dijkstra, E. W. (1968). 
+Go to statement considered harmful. 
+Communications of the ACM, 11(3), 147-148. -->
+
+
+
+
+
+
