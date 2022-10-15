@@ -35,6 +35,16 @@ $$\Delta f(z) + k^2f(z) = 0, \quad z \in \Omega$$
 
 $$f(z) = 0, \quad z \in P$$
 
+common incident fields that are inbuilt to the solver are the following
+
+propogating plane wave from an angle $\theta$
+
+$$g_\theta(z) = -\exp{(-i\Real [kze^{-i\theta}])} \quad \theta \in [0, 2\pi]$$
+
+point source radiating from a point $z_\*$
+
+$$g_{z_\*}(z) = -H_0^{(1)}(k \lvert z - z_{\*} \rvert) \quad z_{\*} \in \Omega$$
+
 
 ## Usage
 
