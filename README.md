@@ -6,12 +6,11 @@
 <!-- [https://user-images.githubusercontent.com/77754538/194108726-112bab3b-30c4-443d-9f5c-154a378ba39d.mp4]:: -->
 
 
-The Helmholtz equation is an elliptic partial differential equation (PDE) that has many applications to physics including accoustics and is named after German physicist Hermann von Helmholtz 1821-1894.
-This repository contains the implementation carried out during my thesis entitled *Ligntning Helmholtz solver*.
-This was completed under the supervision of Professor Nick Trefethen as part of the MSc in Mathematical Sciences at the University of Oxford.
-The lightning method for solving partial differential equations with exceptional speed and accuracy has shown to be greatly successful since it’s introduction.
-Plenty of fruitful work has been completed on the lightning method for the Laplace equation and a state-of-the-art implementation has been developed which solves typical problems in less than 1 second on a desktop to 8-digit accuracy.
-This repository contains helmholtz.m, an analogous version of laplace.m for solving the Helmholtz equation using the lightning method.
+The Helmholtz equation is an elliptic partial differential equation (PDE) and represents a time-independent form of the wave equation.
+It is named after German physicist Hermann von Helmholtz (1821-1894) and has many applications in physics, including seismology, acoustics, and electromagnetic radiation.
+The lightning method for solving PDEs with exceptional speed and accuracy has shown remarkable success with its original introduction for solving the Laplace equation, which has a state-of-the-art implementation that solves typical problems in less than 1 second on a desktop to 8-digit accuracy.
+This repository contains helmholtz.m, an implementation of the lightning method for solving the Helmholtz equation, carried out during my thesis entitled *Lightning Helmholtz solver*.
+I completed this under the supervision of Professor Nick Trefethen as part of the MSc in Mathematical Sciences at the University of Oxford.
 
 
 ## Usage
