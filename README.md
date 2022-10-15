@@ -21,24 +21,24 @@ However,
 
 ![scatter](scatter/combined_merge_markup.png)
 
-The solver approximates $u$ that satisfies the following
+The solver approximates $u$ as to satisfy the following
 
 $$\Delta u(z) + k^2u(z) = 0, \quad z \in \Omega$$
 
 $$u(z) = g(z), \quad z \in P$$
 
-The function u is approximated as to match the incident field and consequently make the total field vanish at the boundary.
+The function $u$ is approximated as to match the incident field and consequently make the total field vanish at the boundary.
 Then the total field is represented by $f = u-g$ which has a vanishing field at the boundary by the construction of $u$ matching $g$.
 By linearity of the Helmholtz equation and the fact that $g$ satisfies the Helmholtz equation, $f$ satisfies the Helmholtz equation with homogeneous boundary condition, that is
-
 $$\Delta f(z) + k^2f(z) = 0, \quad z \in \Omega$$
 
 $$f(z) = 0, \quad z \in P$$
 
-common incident fields that are inbuilt to the solver are the following
+
+Concerning the boundary sampling function, $g$, common incident fields that are inbuilt to the solver are the following
 
 propogating plane wave from an angle $\theta$
-$$g_\theta(z) = -\exp{\left(-i\text{Re}\left[kze^{-i\theta}\right]\right)} \quad \theta \in [0, 2\pi)$$
+$$g_\theta(z) = -\exp{\left(-i\text{Re}\left[kze^{-i\theta}\right]\right)} \quad \theta \in [0, 2\pi$$
 where $\theta$ is the incident angle of propogation.
 
 point source radiating from a point $z_\*$
