@@ -12,7 +12,11 @@ The lightning method for solving PDEs with exceptional speed and accuracy has sh
 This repository contains `helmholtz.m`, an implementation of the lightning method for solving the Helmholtz equation, carried out during my thesis entitled *Lightning Helmholtz solver*.
 I completed this under the supervision of Professor Nick Trefethen as part of the MSc in Mathematical Sciences at the University of Oxford.
 
-
+`helmholtz.m` solves the Helmholtz equation on a domain exterior to a polygon $P$ for small or medium wavenumbers $k > 0$.
+The solver is best demonstrated by the time-harmonic scattering problem.
+A function that solves the Helmholtz equation is used to sample the boundary 
+The solver can handle any valid user-specified boundary sampling function and in fact the boundary data can be specified pointwise for each side of the polygon.
+However, 
 
 
 
