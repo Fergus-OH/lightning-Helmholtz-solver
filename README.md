@@ -21,6 +21,7 @@ However,
 ![scatter](scatter/combined_merge_markup.png)
 
 $$\Delta u(z) + k^2u(z) = 0, \quad z \in \Omega$$
+
 $$u(z) = h(z), \quad z \in P$$
 
 
