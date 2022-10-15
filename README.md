@@ -12,8 +12,8 @@ The lightning method for solving PDEs with exceptional speed and accuracy has ac
 This repository contains `helmholtz.m`, an implementation of the lightning method for solving the Helmholtz equation, carried out during my thesis entitled *Lightning Helmholtz solver*.
 I completed this under the supervision of Professor Nick Trefethen as part of the MSc in Mathematical Sciences at the University of Oxford.
 
-`helmholtz.m` solves the Helmholtz equation on a domain exterior to a polygon $P$ for small or medium wavenumbers $k > 0$ (with inhomogenous boundary data).
-The solver approximates $u$ as to satisfy the following
+`helmholtz.m` solves the Helmholtz equation on a domain exterior to a polygon $P$ for small or medium wavenumbers $k > 0$ with inhomogenous boundary data.
+That is, the solver approximates $u$ as to satisfy the following
 
 $$\Delta u(z) + k^2u(z) = 0, \quad z \in \Omega$$
 
