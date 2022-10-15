@@ -13,6 +13,15 @@ This repository contains helmholtz.m, an implementation of the lightning method 
 I completed this under the supervision of Professor Nick Trefethen as part of the MSc in Mathematical Sciences at the University of Oxford.
 
 
+"...the **go to** statement should be abolished..." [[1]](#1).
+
+## References
+<a id="1">[1]</a> 
+Dijkstra, E. W. (1968). 
+Go to statement considered harmful. 
+Communications of the ACM, 11(3), 147-148.
+
+
 ## Usage
 
 `U = helmholtz(wavenum, P, g)` solves the Helmholtz equation with
