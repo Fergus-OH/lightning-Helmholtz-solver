@@ -14,7 +14,7 @@ I completed this under the supervision of Professor Nick Trefethen as part of th
 
 `helmholtz.m` solves the Helmholtz equation on a domain exterior to a polygon $P$ for small or medium wavenumbers $k > 0$ (with inhomogenous boundary data).
 
-The solver is best demonstrated by the time-harmonic scattering problem.
+The solver is best demonstrated by the time-harmonic scattering problem and a brief description of the problem for context follows.
 A function that solves the Helmholtz equation is used to sample the boundary 
 The solver can handle any valid user-specified boundary sampling function and in fact the boundary data can be specified pointwise for each side of the polygon.
 However, 
