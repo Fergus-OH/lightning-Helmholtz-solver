@@ -44,7 +44,7 @@ where $\theta$ is the incident angle of propogation.
 
 point source radiating from a point $z_\*$
 
-$$g_{z_*}(z) = -H_0^{(1)}(k \lvert z - z_{*} \rvert) \quad z_{\*} \in \Omega$$
+$$g_{z_\*}(z) = -H_0^{(1)}(k \lvert z - z_{\*} \rvert) \quad z_{\*} \in \Omega$$
 
 
 ## Usage
