@@ -18,6 +18,8 @@ A function that solves the Helmholtz equation is used to sample the boundary
 The solver can handle any valid user-specified boundary sampling function and in fact the boundary data can be specified pointwise for each side of the polygon.
 However, 
 
+![scatter](scatter/comined_merge_markup.png)
+
 
 
 
