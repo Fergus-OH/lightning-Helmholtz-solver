@@ -12,7 +12,8 @@ The lightning method for solving PDEs with exceptional speed and accuracy has sh
 This repository contains `helmholtz.m`, an implementation of the lightning method for solving the Helmholtz equation, carried out during my thesis entitled *Lightning Helmholtz solver*.
 I completed this under the supervision of Professor Nick Trefethen as part of the MSc in Mathematical Sciences at the University of Oxford.
 
-`helmholtz.m` solves the Helmholtz equation on a domain exterior to a polygon $P$ for small or medium wavenumbers $k > 0$.
+`helmholtz.m` solves the Helmholtz equation on a domain exterior to a polygon $P$ for small or medium wavenumbers $k > 0$ (with inhomogenous boundary data).
+
 The solver is best demonstrated by the time-harmonic scattering problem.
 A function that solves the Helmholtz equation is used to sample the boundary 
 The solver can handle any valid user-specified boundary sampling function and in fact the boundary data can be specified pointwise for each side of the polygon.
@@ -20,9 +21,15 @@ However,
 
 ![scatter](scatter/combined_merge_markup.png)
 
+The solver approximates $u$ that satisfies the following
+
 $$\Delta u(z) + k^2u(z) = 0, \quad z \in \Omega$$
 
-$$u(z) = h(z), \quad z \in P$$
+$$u(z) = g(z), \quad z \in P$$
+
+The function u is approximated as to match the incident field and consequently make the total field vanish at the boundary.
+Then the total field is represented by $f = u-g$ which has a vanishing field at the boundary by the construction of $u$ matching $g$.
+By linearity of the Helmholtz equation and the fact that $g$ satisfies the Helmholtz equation, $f$ satisfies the Helmholtz equation with homogeneous boundary condition.
 
 
 ## Usage
