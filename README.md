@@ -13,6 +13,13 @@ This repository contains `helmholtz.m`, an implementation of the lightning metho
 I completed this under the supervision of Professor Nick Trefethen as part of the MSc in Mathematical Sciences at the University of Oxford.
 
 `helmholtz.m` solves the Helmholtz equation on a domain exterior to a polygon $P$ for small or medium wavenumbers $k > 0$ (with inhomogenous boundary data).
+The solver approximates $u$ as to satisfy the following
+
+$$\Delta u(z) + k^2u(z) = 0, \quad z \in \Omega$$
+
+$$u(z) = g(z), \quad z \in P$$
+
+### Scattering
 
 The solver is best demonstrated by the time-harmonic scattering problem and a brief description of the problem for context follows.
 A function that solves the Helmholtz equation is used to sample the boundary 
@@ -20,12 +27,6 @@ The solver can handle any valid user-specified boundary sampling function and in
 However, 
 
 ![scatter](scatter/combined_merge_markup.png)
-
-The solver approximates $u$ as to satisfy the following
-
-$$\Delta u(z) + k^2u(z) = 0, \quad z \in \Omega$$
-
-$$u(z) = g(z), \quad z \in P$$
 
 The function $u$ is approximated as to match the incident field and consequently make the total field vanish at the boundary.
 Then the total field is represented by $f = u-g$ which has a vanishing field at the boundary by the construction of $u$ matching $g$.
