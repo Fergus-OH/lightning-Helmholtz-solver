@@ -285,13 +285,13 @@ end
 if plots
    tic,
    uu = u(zz(:));
-   if scat == 0, f = @(x) -g{1}(x);
-   else f = @(x) 0; end
    ind = inpolygonc(zz,ww);
    mxcol = .5*max(real(uu(~ind))); mncol = min(real(uu(~ind)));
    uu = reshape(uu,size(zz));
+   if scat, ff = g{1}(zz) - uu;
+   else ff = uu; end
    axes(PO,[.40 .1 .6 .8])
-   imagesc(sx,sy,real(exp(-1i*0)*(f(zz) + uu)),[mncol mxcol]), hold on
+   imagesc(sx,sy,real(exp(-1i*0)*ff),[mncol mxcol]), hold on
    fill(real(ww),imag(ww),[1 1 1]), hold on, colorbar, set(gca,FS,8)
    set(gca,'YDir','normal')
    mxabscol = max(abs([mxcol,mncol]));
@@ -306,8 +306,7 @@ end
 
 %% 3D Plotting
 if plots && plot3d
-   zz3d = zz; zz3d(ind) = nan;
-   sz = real(exp(1i*0)*(f(zz3d)+u(zz3d)));
+   sz = real(exp(1i*0)*ff); sz(ind) = nan;
    figure, axis equal, surfc(sx,sy,sz)
 end
 
@@ -317,7 +316,7 @@ end
 function [g, P, w, ww, pt, dw, tol, steps, scat, ...
    plots, plot3d, fs, slow] = parseinputs(wavenum, P, varargin)
 %% Defaults
-tol = 1e-6; steps = 0; scat = 0; plots = 1;
+tol = 1e-6; steps = 0; scat = 1; plots = 1;
 plot3d = 1; fs = 9; slow = 0;
 
 z0_pt = .5+1i; z0ang = 5*pi/6;
@@ -426,7 +425,7 @@ while j < nargin-1
 
    elseif strcmp(v,'tol'), j = j+1; tol = varargin{j-1};
    elseif strcmp(v,'steps'), steps = 1; plots = 1;
-   elseif strcmp(v,'scat'), scat = 1;
+   elseif strcmp(v,'noscat'), scat = 0;
    elseif strcmp(v,'noplots'), plots = 0;
    elseif strcmp(v,'noplot3d'), plot3d = 0;
    elseif strcmp(v,'slow'), slow = 1;
