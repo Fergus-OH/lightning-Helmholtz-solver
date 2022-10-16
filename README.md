@@ -134,7 +134,7 @@ The following flag parameters can be specified:
 | `noplots`   | surpresses plotting |
 | `noplots3d` | surpresses 3D surface plotting |
 | `steps`     | for step-by-step plots of errors on boundary and poles |
-| `scat`      | to plot only the scattered field |
+| `noscat`    | turns off the scattering mode, in which case the solution $u$ is plotted  |
 | `slow`      | to turn off adaptive mode for cleaner root-exponential convergence curves |
 
 
