@@ -21,7 +21,7 @@ $$u(z) = g(z), \quad z \in P$$
 
 ### Scattering
 
-The solver is best demonstrated by the time-harmonic scattering problem and a brief description of the problem for context follows.
+The solver is best demonstrated by the time-harmonic scattering problem, a brief description for which now follows.
 A function that solves the Helmholtz equation is used to sample the boundary 
 The solver can handle any valid user-specified boundary sampling function and in fact the boundary data can be specified pointwise for each side of the polygon.
 However, 
