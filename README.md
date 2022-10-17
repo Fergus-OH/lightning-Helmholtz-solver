@@ -85,7 +85,7 @@ However,
 
 ![scatter](scatter/combined_merge_markup.png)
 
-$u^{\text{tot}} = u^{inc} + u^{\text{sct
+$u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$
 
 The function $u$ is approximated as to match the incident field $g$ and consequently make the total field vanish at the boundary.
 Then the total field is represented by $f = g-u$ which has a vanishing field at the boundary by the construction of $u$ matching $g$.
