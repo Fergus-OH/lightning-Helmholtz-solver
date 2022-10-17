@@ -21,12 +21,72 @@ $$u(z) = g(z), \quad z \in P$$
 
 ### Scattering
 
-The solver is best demonstrated by the time-harmonic scattering problem, a brief description for which now follows.
+The solver is best demonstrated by a scattering problem.
+In a direct scattering bounded obstacle, time-harmonic 
+
+
+The solver is best demonstrated by the direct scattering problem of a time-harmonic wave from a bounded, sound-soft obstacle.
+For this problem, the total field is 
+
+For a given incident field $u^{\text{i}}$
+, this problem concerns determining a scattered field $u^{\text{s}}$ such that the total field $u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$ satisfies the Helmholtz equation
+
+This problem boils down to 
+
+(impenetrable)
+
+direct, bounded obstacle, time-harmonic
+A direct sound-soft scattering problem concerns determining a scattered field from the effect of an incident field on a scattering obstacle.
+
+As mentioned, the Helmholtz equation represents the time-harmonic wave equation and so we can consider the effect of a bounded obstacle on an incident time-harmonic wave.
+The total field is 
+
+
+
+
+
+
+
+
+
+Scattering theory is concerned with the effect obstacles or inhomogeneities have on an incident waves.
+
+The Direct Problem: This problem is concerned with determining the scattered field from the knowledge of the incident field and the scattering obstacle.
+
+The propagation of waves in a homogeneous, isotropic medium is mathematically described by the wave equation,
+
+
+Direct Scattering Problems
+
+Scattering by a bounded obstacle
+
+Scattering by a sound soft obstacle
+The total field is usually represented as the sum of the incident and the scattered field.
+The scattering problem can then be formulated as a boundary value problem for the scattered field in the region outside the scattering obstacle, consisting of
+
+the Helmholtz equation,
+a boundary condition on the boundary of the scattering obstacle,
+Sommerfeld's radiation condition.
+
+
+
+
+
+
+
+
+
+
+
+, a brief description for which now follows.
+
 A function that solves the Helmholtz equation is used to sample the boundary 
 The solver can handle any valid user-specified boundary sampling function and in fact the boundary data can be specified pointwise for each side of the polygon.
 However, 
 
 ![scatter](scatter/combined_merge_markup.png)
+
+$u^{\text{tot}} = u^{inc} + u^{\text{sct
 
 The function $u$ is approximated as to match the incident field $g$ and consequently make the total field vanish at the boundary.
 Then the total field is represented by $f = g-u$ which has a vanishing field at the boundary by the construction of $u$ matching $g$.
