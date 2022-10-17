@@ -26,7 +26,9 @@ In a direct scattering bounded obstacle, time-harmonic
 
 
 The solver is best demonstrated by the direct scattering problem of a time-harmonic wave from a bounded, sound-soft obstacle.
-This problem concerns the effect of an impenetrable obstacle on an incident wave.
+This problem concerns the effect of an impenetrable obstacle on an incident wave and considers the total field as a sum of incident and scattered fields, $u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$.
+![scatter](scatter/combined_merge_markup.png)
+
 <!-- For this problem, the total field is considered as a sum of the the incident and scatter fields, that is $u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$.  -->
 More specifically, for a given incident field $u^{\text{i}}$ that satisfies the Helmholtz equation, we wish to determinine a scattered field $u^{\text{s}}$ such that the total field $u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$ satisfies the Helmholtz equation in the region outside of the obstacle, and vanishes at the boundary.
 
@@ -97,9 +99,7 @@ A function that solves the Helmholtz equation is used to sample the boundary
 The solver can handle any valid user-specified boundary sampling function and in fact the boundary data can be specified pointwise for each side of the polygon.
 However, 
 
-![scatter](scatter/combined_merge_markup.png)
 
-$u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$
 
 The function $u$ is approximated as to match the incident field $g$ and consequently make the total field vanish at the boundary.
 Then the total field is represented by $f = g-u$ which has a vanishing field at the boundary by the construction of $u$ matching $g$.
