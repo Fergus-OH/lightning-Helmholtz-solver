@@ -26,12 +26,11 @@ In a direct scattering bounded obstacle, time-harmonic
 
 
 The solver is best demonstrated by the direct scattering problem of a time-harmonic wave from a bounded, sound-soft obstacle.
-For this problem, the total field is 
+For this problem, the total field is considered as a sum of the the incident and scatter fields, that is $u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$. 
 
-For a given incident field $u^{\text{i}}$
-, this problem concerns determining a scattered field $u^{\text{s}}$ such that the total field $u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$ satisfies the Helmholtz equation
+For a given incident field $u^{\text{i}}$, this problem is concerned with determining a scattered field $u^{\text{s}}$ such that the total field $u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$ satisfies the Helmholtz equation with appropriate boundary conditions.
 
-This problem boils down to 
+For a sound-soft object, Homogeneous boundary conditions 
 
 (impenetrable)
 
