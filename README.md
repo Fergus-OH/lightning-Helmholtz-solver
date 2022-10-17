@@ -26,11 +26,23 @@ In a direct scattering bounded obstacle, time-harmonic
 
 
 The solver is best demonstrated by the direct scattering problem of a time-harmonic wave from a bounded, sound-soft obstacle.
-For this problem, the total field is considered as a sum of the the incident and scatter fields, that is $u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$. 
+This problem concerns the effect of an impenetrable obstacle on an incident wave.
+<!-- For this problem, the total field is considered as a sum of the the incident and scatter fields, that is $u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$.  -->
+More specifically, for a given incident field $u^{\text{i}}$ that satisfies the Helmholtz equation, we wish to determinine a scattered field $u^{\text{s}}$ such that the total field $u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$ satisfies the Helmholtz equation in the region outside of the obstacle, and vanishes at the boundary.
 
-For a given incident field $u^{\text{i}}$, this problem is concerned with determining a scattered field $u^{\text{s}}$ such that the total field $u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$ satisfies the Helmholtz equation with appropriate boundary conditions.
+<!-- For a sound-soft object, Homogeneous boundary conditions  -->
 
-For a sound-soft object, Homogeneous boundary conditions 
+Solving for the scattered field can be written as an inhomogeneous problem, suitable for our solver:
+
+`helmholtz.m` solves the following inhomogeneous problem
+
+$$\Delta u^{\text{s}}(z) + k^2u^{\text{s}}(z) = 0, \quad z \in \Omega$$
+
+$$u^{\text{s}}(z) = -u^{\text{i}}(z), \quad z \in P$$
+
+
+
+
 
 (impenetrable)
 
