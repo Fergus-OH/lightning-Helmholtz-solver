@@ -32,9 +32,11 @@ More specifically, for a given incident field $u^{\text{i}}$ that satisfies the 
 
 <!-- For a sound-soft object, Homogeneous boundary conditions  -->
 
+
 Solving for the scattered field can be written as an inhomogeneous problem, suitable for our solver:
 
-`helmholtz.m` solves the following inhomogeneous problem
+
+This boils down to the following inhomogeneous boundary value problem
 
 $$\Delta u^{\text{s}}(z) + k^2u^{\text{s}}(z) = 0, \quad z \in \Omega$$
 
