@@ -177,7 +177,7 @@ Name-value arguments must appear after other arguments, but the order of the pai
 - `z0`  
       (complex number)
 - `fs` (float+)  
-      Default 12?. set font size for plots
+      Default 12. set font size for plots
 
 
 
