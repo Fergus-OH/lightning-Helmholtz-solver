@@ -111,10 +111,10 @@ $$f(z) = 0, \quad z \in P$$
 
 Concerning the boundary sampling function, $g$, common incident fields that are inbuilt to the solver are the following
 
-propogating plane wave from an incident angle of propogation, $\theta$
+- propogating plane wave from an incident angle of propogation, $\theta$
 $$g_\theta(z) = -\exp{\left(-i\text{Re}\left\[kze^{-i\theta}\right\]\right)} \quad \theta \in \[0, 2\pi)$$
 
-point source radiating from a point source $z_\*$
+- point source radiating from a point source $z_\*$
 $$g_{z_\*}(z) = -H_0^{(1)}\left(k \lvert z - z_{\*} \rvert\right) \quad z_{\*} \in \Omega$$
 
 ## Usage
