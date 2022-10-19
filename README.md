@@ -36,7 +36,7 @@ More specifically, for a given incident field $u^{\text{i}}$ that satisfies the 
 <!-- For a sound-soft object, Homogeneous boundary conditions  -->
 
 
-This problem of solving for the scattered field $u^{\text{s}}$ can be written as an inhomogeneous problem, suitable for our solver:
+This problem of solving for the scattered field $u^{\text{s}}$ can be written as an inhomogeneous boundary value problem, suitable for our solver:
 
 <!-- 
 This boils down to the following inhomogeneous boundary value problem -->
@@ -93,7 +93,7 @@ Sommerfeld's radiation condition. -->
 
 
 
-, a brief description for which now follows.
+<!-- , a brief description for which now follows.
 
 A function that solves the Helmholtz equation is used to sample the boundary 
 The solver can handle any valid user-specified boundary sampling function and in fact the boundary data can be specified pointwise for each side of the polygon.
@@ -107,7 +107,7 @@ By linearity of the Helmholtz equation and the fact that $g$ satisfies the Helmh
 $$\Delta f(z) + k^2f(z) = 0, \quad z \in \Omega$$
 
 $$f(z) = 0, \quad z \in P$$
-
+ -->
 
 Concerning the boundary sampling function, $g$, common incident fields that are inbuilt to the solver are the following
 
