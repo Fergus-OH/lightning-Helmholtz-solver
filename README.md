@@ -36,10 +36,10 @@ More specifically, for a given incident field $u^{\text{i}}$ that satisfies the 
 <!-- For a sound-soft object, Homogeneous boundary conditions  -->
 
 
-Solving for the scattered field can be written as an inhomogeneous problem, suitable for our solver:
+This problem of solving for the scattered field $u^{\text{s}}$ can be written as an inhomogeneous problem, suitable for our solver:
 
-
-This boils down to the following inhomogeneous boundary value problem
+<!-- 
+This boils down to the following inhomogeneous boundary value problem -->
 
 $$\Delta u^{\text{s}}(z) + k^2u^{\text{s}}(z) = 0, \quad z \in \Omega$$
 
@@ -48,14 +48,14 @@ $$u^{\text{s}}(z) = -u^{\text{i}}(z), \quad z \in P$$
 
 
 
-
+<!-- 
 (impenetrable)
 
 direct, bounded obstacle, time-harmonic
 A direct sound-soft scattering problem concerns determining a scattered field from the effect of an incident field on a scattering obstacle.
 
 As mentioned, the Helmholtz equation represents the time-harmonic wave equation and so we can consider the effect of a bounded obstacle on an incident time-harmonic wave.
-The total field is 
+The total field is  -->
 
 
 
@@ -64,7 +64,7 @@ The total field is
 
 
 
-
+<!-- 
 Scattering theory is concerned with the effect obstacles or inhomogeneities have on an incident waves.
 
 The Direct Problem: This problem is concerned with determining the scattered field from the knowledge of the incident field and the scattering obstacle.
@@ -77,12 +77,11 @@ Direct Scattering Problems
 Scattering by a bounded obstacle
 
 Scattering by a sound soft obstacle
-The total field is usually represented as the sum of the incident and the scattered field.
 The scattering problem can then be formulated as a boundary value problem for the scattered field in the region outside the scattering obstacle, consisting of
 
 the Helmholtz equation,
 a boundary condition on the boundary of the scattering obstacle,
-Sommerfeld's radiation condition.
+Sommerfeld's radiation condition. -->
 
 
 
