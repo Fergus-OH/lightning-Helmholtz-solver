@@ -20,9 +20,9 @@ $$\Delta u(z) + k^2u(z) = 0, \quad z \in \Omega$$
 $$u(z) = g(z), \quad z \in P$$
 
 ### Scattering
-
+<!-- 
 The solver is best demonstrated by a scattering problem.
-In a direct scattering bounded obstacle, time-harmonic 
+In a direct scattering bounded obstacle, time-harmonic  -->
 
 
 The solver is best demonstrated by the direct scattering problem of a time-harmonic wave from a bounded, sound-soft obstacle.
