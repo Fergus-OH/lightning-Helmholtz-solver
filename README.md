@@ -1,5 +1,4 @@
 # Lightning Helmholtz Solver
-### (readme is work in progress)
 
 <img src="https://user-images.githubusercontent.com/77754538/194128251-c13a9ae0-7c2e-4f30-80af-4c061708221e.gif" width="100%" height="100%">
 
@@ -110,7 +109,7 @@ $$\Delta f(z) + k^2f(z) = 0, \quad z \in \Omega$$
 $$f(z) = 0, \quad z \in P$$
  -->
 
-Concerning the boundary sampling function, $g$, common incident fields that are inbuilt to the solver are the following
+Concerning the boundary sampling function, $g$, common incident fields, which are built into the solver, are the following:
 
 - propogating plane wave from an incident angle of propogation, $\theta$
 $$g_\theta(z) = -\exp{\left(-i\text{Re}\left\[kze^{-i\theta}\right\]\right)} \quad \theta \in \[0, 2\pi)$$
@@ -133,17 +132,17 @@ Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, 
 #### Required positional arguments
 
 
-1. `wavenum` (non-zero integer)  
+1. `wavenum` (integer value greater than 0)  
     The sign of `wavnum` is used as an indicator to determine the default value for `g`.
     Negative integers are used to indicate plane wave propogation or point source radiation problem.
     The wavenumber for the problem is taken to be the absolute value of `wavnum`, a minus sign can meerly be used as a flag.
     
-2. `P` (integer, vector, or string)  
+2. `P` (vector, string, or integer value)  
    One of the following:
-    - Vector of corners as complex numbers $z = x+iy$ in counterclockwise order to specify a polygon or cell array of corners `v` and pairs `[v r]` to specify a circular polygon: $r =$ radius of curvature of arc from this `v` to the next.
-    - string from one of the predefined polygons in the table below.
-    -  integer $\ge 3$, the number of corners of a random polygon.
-    -  integer $\le -3, -1$ $\times$ no. of corners of a random circular polygon.
+    - Vector of corners as complex numbers $z = x+iy$ in counterclockwise order to specify a polygon or cell array of corners `v` and pairs `[v r]` to specify a circular polygon: $r =$ radius of curvature of arc from corner `v` to the next.
+    - String from one of the predefined polygons in the table below.
+    -  Integer $\ge 3$, the number of corners of a random polygon.
+    -  Integer $\le -3, -1$ $\times$ number of corners of a random circular polygon.
     
     | String     | Description |
     | :--------- | :---------: |
@@ -157,13 +156,14 @@ Dirichlet boundary data on the simply-connected region $\Omega$ bounded by `P`, 
     | `'C'`      | C shape |
     | `bullet`   | bullet |
 
-<!-- One of the predefined polygons of specified strings from the table below. -->
 
 #### Optional positional arguments
 3. `g` (function handle)  
-     function handle for Dirichlet boundary data that satisfies the Helmholtz equation or cell array of function handles for sides `P1`-`P2`, `P2`-`P3`.
-      Default `@(z) exp(-1i*real(wavenum*exp(-1i*z0ang)*z)))` for `wavenum`$>0$ `@(z) @(z) besselh(0,-wavenum*abs(z-(z0_pt)))` for `wavenum`$<0$.
-
+     Function handle for Dirichlet boundary data that satisfies the Helmholtz equation or cell array of function handles for sides `P1`-`P2`, `P2`-`P3`, ...  
+      Default:
+      - `@(z) exp(-1i*real(wavenum*exp(-1i*z0ang)*z)))` for `wavenum`$>0$
+      - `@(z) @(z) besselh(0,-wavenum*abs(z-(z0_pt)))` for `wavenum`$<0$.  
+      These functions represent incident plane waves and point source radiatiating waves respectively.
 
 
 #### Optional name-value arguments
@@ -172,11 +172,13 @@ Optional pairs of arguments as `Name1, Value1, ..., NameN, ValueN`, where Name i
 Name-value arguments must appear after other arguments, but the order of the pairs does not matter.
 
 
-- `tol` (float)  
-      Default 1e-6. Tolerance etc
-- `z0`  
-      (complex number)
-- `fs` (float+)  
+- `tol` (positive real scalar)  
+    Tolerance for maximal absolute error. Default 1e-6.
+- `z0` (scalar)  
+    The point source location for point source radiating waves (`wavenum` $>0$), or the angle of incidence for plane waves (`wavenum` $<0$).
+    For plane waves, either an angle can be passed as a real scalar or a point can be passed as a complex scalar, in which case the angle will be taken as `angle(z0)`. Default: $0.5+1i$.
+     
+- `fs` (scalar value greater than 0)  
       Default 12. set font size for plots
 
 
@@ -282,6 +284,8 @@ helmholtz(wavenum,'sqr',g,'noplot3d');
 ```
 
 
+
+#### (readme is in progress)
 
 
 

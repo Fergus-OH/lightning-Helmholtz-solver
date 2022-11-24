@@ -14,7 +14,7 @@ function [u, maxerr, tsolve, nkv, Z, Zplot, pol, A] = helmholtz(wavenum, P, vara
 %             'sqr'[square], 'rec'[tangle], 'snow'[flake], pent[agaon],
 %              'hex'[agon], 'L', 'circleL', or 'C'
 %          or integer >= 3, the number of corners of a random polygon
-%          or integer <= -3, -1 x no. of corners of a random circular polygon]
+%          or integer <= -3, -1 x number of corners of a random circular polygon]
 % 
 %      g = function handle for Dirichlet boundary data that satisfies helm(g)
 %          or cell array of function handles for sides P1-P2, P2-P3,...
