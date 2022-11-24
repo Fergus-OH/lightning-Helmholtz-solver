@@ -1,6 +1,11 @@
 # Lightning Helmholtz Solver
 
-<img src="https://user-images.githubusercontent.com/77754538/194128251-c13a9ae0-7c2e-4f30-80af-4c061708221e.gif" width="100%" height="100%">
+
+
+<p align="center">
+    <img src="assets/helmgif.gif" width="49%" height="49%">
+    <img src="assets/helmgifwave.gif" width="49%" height="49%">
+</p>
 
 
 <!-- [https://user-images.githubusercontent.com/77754538/194108726-112bab3b-30c4-443d-9f5c-154a378ba39d.mp4]:: -->
@@ -28,7 +33,7 @@ In a direct scattering bounded obstacle, time-harmonic  -->
 The solver is best demonstrated by the direct scattering problem of a time-harmonic wave from a bounded, sound-soft obstacle.
 This concerns the effect of an impenetrable obstacle on an incident wave and considers the total field as a sum of incident and scattered fields, $u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$.
 
-![scatter](scatter/combined_merge_markup.png)
+![scatter](assets/combined_merge_markup.png)
 
 <!-- For this problem, the total field is considered as a sum of the the incident and scatter fields, that is $u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$.  -->
 More specifically, for a given incident field $u^{\text{i}}$ that satisfies the Helmholtz equation, we wish to determinine a scattered field $u^{\text{s}}$ such that the total field $u^{\text{t}} = u^{\text{i}} + u^{\text{s}}$ satisfies the Helmholtz equation in the region outside of the obstacle, and vanishes at the boundary.
@@ -260,24 +265,43 @@ available configuration options are:
     
 ## Examples
 
-Examples:
+Plane with square
+```MATLAB
+helmholtz(50,'sqr');
+```
 
-`helmholtz(50,'sqr');`                              % plane with square
+Point with square
+```MATLAB
+helmholtz(-50,'sqr');
+```
 
-`helmholtz(-50,'sqr');`                             % point with square
+Pentagon
+```MATLAB
+helmholtz(-20,'pent','tol',1e-10);
+```
 
-`helmholtz(-20,'pent','tol',1e-10);`                % pentagon
+Circular L-shape
+```MATLAB
+helmholtz(-20,'circleL','z0',2+3i);
+```
 
-`helmholtz(-20,'circleL','z0',2+3i);`               % circular L-shape
+Bullet
+```MATLAB
+helmholtz(20,'bullet','z0',1);
+```
 
-`helmholtz(20,'bullet','z0',1);`                    % bullet
+Snowflake
+```MATLAB
+helmholtz(-30,'snow','steps')
+```
 
-`helmholtz(-30,'snow','steps')`                     % snowflake
+Triangle
+```MATLAB
+helmholtz(50,[1/2*exp(2i*pi*([1:3])/3)],'z0',1i)
+```
 
-`helmholtz(50,[1/2*exp(2i*pi*([1:3])/3)],'z0',1i)`  % triangle
-
-% two point sources:
-```matlab
+Two point sources:
+```MATLAB
 wavenum = -30; z0_pt = .5+1i;
 g = @(z) besselh(0,-wavenum*abs(z-(z0_pt))) + besselh(0,-wavenum*abs(z-(-z0_pt')));
 helmholtz(wavenum,'sqr',g,'noplot3d');
@@ -288,7 +312,24 @@ helmholtz(wavenum,'sqr',g,'noplot3d');
 #### (readme is in progress)
 
 
+<p align="center">
+    <img src="assets/square_speed.png" width="70%">
+</p>
 
+Example output of the solver for a point source incident wave with wavenumber $k=20$ and default parameters. The Helmholtz equation is solved on the domain exterior to a square to 6 digits of accuracy in under half a second on a laptop.
+
+<p align="center">
+    <img src="assets/point50.png" width="90%">
+    <img src="assets/plane50.png" width="90%">
+</p>
+
+Decreasing the tolerance imporoves the accuracy of the solution.
+For wavenumber $k=50$, the solver can achieve 10 digits of accuracy in under 8 seconds for a point source wave and 9 digits of accuracy in under 14 seconds for a plane wave.
+
+
+<p align="center">
+    <img src="assets/steps.png" width="50%" height="50%">
+</p>
 
 
 ## References
